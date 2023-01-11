@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Carro {
     Motor Motor;
-    ArrayList <Llantas> llantas;
+    Llantas llantas;
     String Conductor;
     String Placa;
 
     public Carro() {
     }
-    
-    public Carro(Motor Motor, ArrayList<Llantas> llantas, String Conductor, String Placa) {
+
+    public Carro(Motor Motor, Llantas llantas, String Conductor, String Placa) {
         this.Motor = Motor;
         this.llantas = llantas;
         this.Conductor = Conductor;
@@ -26,11 +26,11 @@ public class Carro {
         this.Motor = Motor;
     }
 
-    public ArrayList<Llantas> getLlantas() {
+    public Llantas getLlantas() {
         return llantas;
     }
 
-    public void setLlantas(ArrayList<Llantas> llantas) {
+    public void setLlantas(Llantas llantas) {
         this.llantas = llantas;
     }
 
@@ -49,6 +49,9 @@ public class Carro {
     public void setPlaca(String Placa) {
         this.Placa = Placa;
     }
+    
+    
+
 
     @Override
     public String toString() {

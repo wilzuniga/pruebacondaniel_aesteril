@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 /*
@@ -50,6 +51,13 @@ public class jframe extends javax.swing.JFrame {
         Material_Llantas = new javax.swing.JTextField();
         Tamaño_llantas = new javax.swing.JTextField();
         Crear_llantas = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        Crear_llantas1 = new javax.swing.JButton();
+        Combobox_motor = new javax.swing.JComboBox<>();
+        Combobox_llantas = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("cosito principal");
@@ -203,7 +211,7 @@ public class jframe extends javax.swing.JFrame {
                     .addComponent(jLabel10)
                     .addComponent(jLabel8)
                     .addComponent(jLabel7))
-                .addGap(266, 394, Short.MAX_VALUE))
+                .addGap(266, 406, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Crear_llantas)
@@ -228,7 +236,69 @@ public class jframe extends javax.swing.JFrame {
                 .addComponent(Tamaño_llantas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(141, 141, 141)
                 .addComponent(Crear_llantas)
+                .addContainerGap(147, Short.MAX_VALUE))
+        );
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel5.setForeground(new java.awt.Color(204, 204, 255));
+
+        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel11.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel11.setText("Carro");
+
+        jLabel12.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel12.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel12.setText("Motor");
+
+        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel13.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel13.setText("LLantas");
+
+        Crear_llantas1.setText("CREAR");
+        Crear_llantas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Crear_llantas1ActionPerformed(evt);
+            }
+        });
+
+        Combobox_motor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        Combobox_llantas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(107, Short.MAX_VALUE)
+                .addComponent(Crear_llantas1)
+                .addGap(190, 190, 190))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel11)
+                    .addComponent(Combobox_motor, 0, 189, Short.MAX_VALUE)
+                    .addComponent(Combobox_llantas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel11)
+                .addGap(32, 32, 32)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Combobox_motor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Combobox_llantas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(204, 204, 204)
+                .addComponent(Crear_llantas1)
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -240,15 +310,19 @@ public class jframe extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
@@ -301,13 +375,21 @@ public class jframe extends javax.swing.JFrame {
         coso.setCilindros(Integer.parseInt(cilindros_motor.getText()));
         coso.setCombustible(Integer.parseInt(Combustible_motor.getText()));
         coso.setMaterial(material_motor.getText());
-        
+        motores.add(coso);
+
         Caballaje_Motor.setText("");
         cilindros_motor.setText("");
         Combustible_motor.setText("");
         material_motor.setText("");
 
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        for (Motor motor : motores) {
+            modelo.addElement(motor);
+        }
+        Combobox_motor.setModel(modelo);
+
         JOptionPane.showMessageDialog(jPanel4, "el motor se ha creado con exito");
+
 
     }//GEN-LAST:event_Crear_MotorActionPerformed
 
@@ -320,8 +402,29 @@ public class jframe extends javax.swing.JFrame {
     }//GEN-LAST:event_Tamaño_llantasActionPerformed
 
     private void Crear_llantasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Crear_llantasActionPerformed
-        // TODO add your handling code here:
+        Llantas coso = new Llantas();
+
+        coso.setKilometraje(Integer.parseInt(Kilometraje_llantas.getText()));
+        coso.setTamaño(Integer.parseInt(Tamaño_llantas.getText()));
+        coso.setMaterial(Material_Llantas.getText());
+
+        Kilometraje_llantas.setText("");
+        Tamaño_llantas.setText("");
+        Material_Llantas.setText("");
+
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        for (Llantas llanta : llantas) {
+            modelo.addElement(llanta);
+        }
+        Combobox_llantas.setModel(modelo);
+
+        JOptionPane.showMessageDialog(jPanel4, "la llanta se ha creado con exito");
+
     }//GEN-LAST:event_Crear_llantasActionPerformed
+
+    private void Crear_llantas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Crear_llantas1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Crear_llantas1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -359,18 +462,26 @@ public class jframe extends javax.swing.JFrame {
     }
 
     //cosas nuevas
-    ArrayList<Motor> motores;
+    ArrayList<Motor> motores = new ArrayList();
+    ArrayList<Llantas> llantas = new ArrayList();
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Caballaje_Motor;
+    private javax.swing.JComboBox<String> Combobox_llantas;
+    private javax.swing.JComboBox<String> Combobox_motor;
     private javax.swing.JTextField Combustible_motor;
     private javax.swing.JButton Crear_Motor;
     private javax.swing.JButton Crear_llantas;
+    private javax.swing.JButton Crear_llantas1;
     private javax.swing.JTextField Kilometraje_llantas;
     private javax.swing.JTextField Material_Llantas;
     private javax.swing.JTextField Tamaño_llantas;
     private javax.swing.JTextField cilindros_motor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -383,6 +494,7 @@ public class jframe extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField material_motor;
     // End of variables declaration//GEN-END:variables
